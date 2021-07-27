@@ -7,3 +7,5 @@ tenacity
 pandas
 p_tqdm
 argh
+flatten_dict
+pyyaml
