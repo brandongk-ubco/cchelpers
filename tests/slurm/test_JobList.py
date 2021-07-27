@@ -8,14 +8,14 @@ class TestJobList():
         job_hashes = []
         jobs = []
         jl = JobList()
-        assert len(jl) == 0
         for i in range(100):
+            assert len(jl) == i
+
             job_hash = uuid4()
             job = Job(job_hash=job_hash)
             job_hashes.append(job_hash)
             jobs.append(job)
             jl.addJob(job)
-            assert len(jl) == i
         assert len(jl) == 100
         for i, job_hash in enumerate(job_hashes):
             assert jl.getJob(job_hash) == jobs[i]
