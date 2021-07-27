@@ -3,4 +3,6 @@ omit =
     tests/*
     **/__init__.py
     */__main__.py
+    */slurm/*.py
+    */commands/*.py
     
