@@ -5,13 +5,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 with open("requirements.txt", "r") as fh:
-    requirements = [l.strip() for l in fh.readlines() if l.strip()]
+    requirements = [line.strip() for line in fh.readlines() if line.strip()]
 
 setuptools.setup(name="cchelpers",
                  version=os.environ.get("RELEASE_VERSION", "alpha"),
                  author="Brandon Graham-Knight",
                  author_email="brandongk@alumni.ubc.ca",
                  description="Helpers for working in Compute Canada.",
+                 license="MIT",
                  long_description=long_description,
                  long_description_content_type="text/markdown",
                  url="https://github.com/brandongk-ubco/cchelpers",
