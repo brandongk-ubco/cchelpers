@@ -6,9 +6,9 @@ from cchelpers.jobs import Job
 import pandas as pd
 
 
-def get_job(job_hash: str, queue_df: pd.DataFrame) -> Job:
-    slurm_id = get_id(job_hash)
-    file_status = get_file_status(job_hash)
+def get_job(base_dir: str, job_hash: str, queue_df: pd.DataFrame) -> Job:
+    slurm_id = get_id(base_dir, job_hash)
+    file_status = get_file_status(base_dir, job_hash)
     queue_status = get_queue_status(slurm_id, queue_df)
     try:
         job_status = resolve_status(queue_status, file_status)

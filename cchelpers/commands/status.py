@@ -19,7 +19,8 @@ def status(indir: str = "."):
     print("Done building slurm queue status, found {} entries".format(
         len(queue_df)))
 
-    for job in mapper(lambda job_hash: get_job(job_hash, queue_df), folders):
+    for job in mapper(lambda job_hash: get_job(indir, job_hash, queue_df),
+                      folders):
         jobs.addJob(job)
 
     rerun = [j for j in jobs.jobs.values() if j.status == JobStatus.ERROR]
