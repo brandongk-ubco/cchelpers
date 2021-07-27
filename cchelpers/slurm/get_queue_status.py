@@ -23,7 +23,7 @@ def get_queue_status(slurm_id: int, jobs_df: pd.DataFrame) -> JobStatus:
     if slurm_queue_status["ST"] == "PD":
         return JobStatus.PENDING
     if slurm_queue_status["ST"] == "CG":
-        return JobStatus.COMPLETING
+        return JobStatus.RUNNING
     if slurm_queue_status["ST"] == "R":
         return JobStatus.RUNNING
     return JobStatus.UNKNOWN

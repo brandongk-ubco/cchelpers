@@ -1,1 +1,1 @@
-python -m pytest --cov=ensembler --cov-branch --cov-report term-missing --cov-fail-under=90
+python -m pytest --cov=cchelpers --cov-branch --cov-report term-missing --cov-fail-under=90
