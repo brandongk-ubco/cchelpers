@@ -4,6 +4,9 @@ import os
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+with open("requirements.txt", "r") as fh:
+    requirements = [l.strip() for l in fh.readlines() if l.strip()]
+
 setuptools.setup(name="cchelpers",
                  version=os.environ.get("RELEASE_VERSION", "alpha"),
                  author="Brandon Graham-Knight",
@@ -13,7 +16,7 @@ setuptools.setup(name="cchelpers",
                  long_description_content_type="text/markdown",
                  url="https://github.com/brandongk-ubco/cchelpers",
                  packages=['cchelpers'],
-                 install_requires=[],
+                 install_requires=requirements,
                  classifiers=[
                      "Programming Language :: Python :: 3",
                      "License :: OSI Approved :: MIT License",
