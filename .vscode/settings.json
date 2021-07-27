@@ -1,0 +1,15 @@
+{
+    "python.pythonPath": "C:\\Users\\bgk60\\Miniconda3\\envs\\ensembler\\python.exe",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.formatting.provider": "yapf",
+    "editor.formatOnSave": true,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true
+}
