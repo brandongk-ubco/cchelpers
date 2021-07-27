@@ -47,7 +47,7 @@ def resolve_status(queue_status, file_status):
     if file_status == JobStatus.PENDING and queue_status == JobStatus.RUNNING:
         return JobStatus.ERROR
     if file_status == JobStatus.PENDING and queue_status == JobStatus.UNKNOWN:
-        return JobStatus.RUNNING
+        return JobStatus.PENDING
 
     if file_status == JobStatus.RUNNING and queue_status == JobStatus.NOT_SCHEDULED:
         return JobStatus.ERROR
